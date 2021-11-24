@@ -1,0 +1,16 @@
+{
+  "name": "simpleserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon index.js"
+  },
+  "author": "Agasi",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
