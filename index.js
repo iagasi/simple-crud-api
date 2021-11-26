@@ -1,6 +1,11 @@
 const router=require("./routes/personRoutes")
 const http = require('http');
-const port=5000
+
+require('dotenv').config()
+
+
+const port=process.env.PORT||5001
+
 const server=http.createServer((req,res)=>{
 router(req,res)
 

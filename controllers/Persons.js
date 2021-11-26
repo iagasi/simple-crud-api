@@ -32,6 +32,7 @@ const persons = (req, res) => {
 
 
     if (req.method == "GET") {
+        
         const valid = testUuidu(url, res)
         if (valid) {
             const person = arrayOfPersons.find((element) => element.id === url);
@@ -71,25 +72,25 @@ const persons = (req, res) => {
 
     if (req.method == "PUT") {
         const valid = testUuidu(url, res)
-        if(!valid){return}
+        if (!valid) { return }
         let body = "";
         req.on("data", (chunk) => {
             body += chunk.toString();
         });
         req.on("end", () => {
 
-            try{
-            body = JSON.parse(body);
-            const person = new Dto(body, url);
-            if(arrayOfPersons === undefined || arrayOfPersons.length == 0){throw new Error("The persons list is empty--create new persond thee you cat update it")}
-            arrayOfPersons.forEach((element, i) => { if (element.id === url) { arrayOfPersons[i] = person ;console.log("gell")} else{throw new Error("Cannot find person with such id for uodating")}})
+            try {
+                body = JSON.parse(body);
+                const person = new Dto(body, url);
+                if (arrayOfPersons === undefined || arrayOfPersons.length == 0) { throw new Error("The persons list is empty--create new persond thee you cat update it") }
+                arrayOfPersons.forEach((element, i) => { if (element.id === url) { arrayOfPersons[i] = person; } else { throw new Error("Cannot find person with such id for uodating") } })
 
-            // res.writeHead(200)
-            // res.end("Updted Person" + JSON.stringify(person));
+                res.writeHead(200)
+                res.end( JSON.stringify(person));
             }
-            catch(err){
+            catch (err) {
                 res.writeHead(400)
-                res.end(err.message)
+                res.end(JSON.stringify(err.message))
             }
         });
 
@@ -106,21 +107,41 @@ const persons = (req, res) => {
 
 
     if (req.method == "DELETE") {
+        
         const valid = testUuidu(url, res)
-        if(!valid){return}
-        const deletedPerson = arrayOfPersons.filter((element) => {
-            return url !== element.id;
-        });
+        if (!valid) { return }
+        arrayOfPersons.forEach((element,i)=>{
+     if(url==element.id){
+       arrayOfPersons.splice(i,1)
+             res.writeHead(204)
+           return  res.end()     
+            
 
-        if (deletedPerson) {
-            arrayOfPersons = deletedPerson
-            res.writeHead(204)
-            res.end("Sucesfully delete")
-        }
-        else {
-            res.writeHead(404)
+     }
+    
+
+                 else{
+      res.writeHead(404)
             res.end("Id not found for deleting")
-        }
+            }
+
+
+
+        })
+     
+      
+
+      
+
+ 
+
+    
+       
+
+        
+        
+
+        
 
     }
 
