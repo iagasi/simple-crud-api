@@ -28,8 +28,8 @@ const customHttp={
                 resolve(
                   {body:parsed,
                   statusCode:res.statusCode})
-        
-              
+     
+             
         
               })
         res.on("error",(error)=>{reject(error.message)})
