@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build":"webpack",
+    "build": "webpack",
     "start:dev": "nodemon index.js",
     "start:prod": "webpack && node ./dist/main.js"
   },
@@ -16,13 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "jest": "^27.3.1",
     "nodemon": "^2.0.15",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-   
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1"
-   
   }
 }
