@@ -47,7 +47,7 @@ test("Creates new Person", async () => {
 
 
 
-test("get person by id", async() => {
+test("get person by id", async () => {
     const url = {
         hostname: 'localhost',
         port: process.env.PORT,
@@ -62,7 +62,7 @@ test("get person by id", async() => {
 
 
 
-test("Modifies Person ,id remains same",async()=>{
+test("Modifies Person ,id remains same", async () => {
     const url = {
         hostname: 'localhost',
         port: process.env.PORT,
@@ -70,7 +70,7 @@ test("Modifies Person ,id remains same",async()=>{
         method: 'PUT',
     }
 
-    
+
     const person = {
         name: "Modified",
         age: 22,
@@ -85,7 +85,7 @@ test("Modifies Person ,id remains same",async()=>{
 })
 
 
-test("Deletes Person",async()=>{
+test("Deletes Person", async () => {
     const url = {
         hostname: 'localhost',
         port: process.env.PORT,
@@ -97,9 +97,9 @@ test("Deletes Person",async()=>{
 
 
     const response = await customHttp.request(url, {})
-    
+
     expect(response.statusCode).toBe(204)
-    
+
 })
 
 
@@ -108,7 +108,7 @@ test("Deletes Person",async()=>{
 test("TEST gell all persons must be array ", async () => {
     const url = {
         hostname: 'localhost',
-        port:process.env.PORT,
+        port: process.env.PORT,
         path: '/persons/',
         method: 'GET',
     }
