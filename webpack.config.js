@@ -6,11 +6,8 @@ const path = require('path');
 
 module.exports = {
   target:"node",
-  mode: 'development',
-  // devServer:{
-  //   static:"./dist"
-   
-  // },
+  mode: 'production',
+
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist/'),

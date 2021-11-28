@@ -14,6 +14,7 @@ test("TEST gell all persons must be array ", async () => {
 
 
     const response = await customHttp.request(url, {})
+    expect(typeof response.body).toBe("object")
     expect(response.body).toBeDefined()
 
 })
@@ -115,5 +116,5 @@ test("TEST gell all persons must be array ", async () => {
 
     const response = await customHttp.request(url, {})
     expect(typeof response.body).toBe("object")
-
+    expect(response.body).toBeDefined()
 })
