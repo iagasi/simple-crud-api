@@ -17,7 +17,7 @@ example:   http://localhost:5000/persons/
 <h1>this video is ESPECIALLY for croscheckers</h1>
 https://disk.yandex.com/i/tH8PYMwu0wHxZg
 
-
+</br>
 
 all tasks done  162  points
 link to requirements https://github.com/rolling-scopes-school/basic-nodejs-course/blob/master/cross-check/simple-crud-api.md
