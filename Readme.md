@@ -14,6 +14,9 @@ example:   http://localhost:5000/persons/
 
 <h1>Роут /person нерабочий надо перейти на /persons/</h1>
 
+<h1>this video is ESPECIALLY for croscheckers</h1>
+https://disk.yandex.com/i/tH8PYMwu0wHxZg
+
 
 
 all tasks done  162  points
