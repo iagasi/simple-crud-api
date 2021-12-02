@@ -5,7 +5,7 @@ To run  tests  first run server  you can type  " npm run start:dev   or   npm ru
 
 
 
-Роут /person нерабочий надо перейти на /persons  на /persons/
+Роут /person нерабочий надо перейти на /persons/
 
 all tasks done  162  points
 link to requirements https://github.com/rolling-scopes-school/basic-nodejs-course/blob/master/cross-check/simple-crud-api.md
