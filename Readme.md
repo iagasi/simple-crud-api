@@ -1,11 +1,15 @@
 date of submit 11/28/2021
 date of deadline  11/29/2021
+Make git clone , then- git checkout development, then -npm install
+
+
 To run  tests  first run server  you can type  " npm run start:dev   or   npm run start:prod  "   .then    npm test 
+server located on port 5000
 
-
-
-
+example:   http://localhost:5000/persons/
 Роут /person нерабочий надо перейти на /persons/
+
+
 
 all tasks done  162  points
 link to requirements https://github.com/rolling-scopes-school/basic-nodejs-course/blob/master/cross-check/simple-crud-api.md
