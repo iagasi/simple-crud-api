@@ -2,7 +2,7 @@ date of submit 11/28/2021
 date of deadline  11/29/2021
 
 Make git clone , then- git checkout development, then -npm install
-
+<h1>Во время тестов сервер должен быть запущен
 
 To run  tests  first run server  you can type  " npm run start:dev   or   npm run start:prod  "   .then    npm test 
 
