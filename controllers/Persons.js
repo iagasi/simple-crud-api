@@ -25,7 +25,7 @@ const persons = (req, res) => {
 
     if (url === "") {
         if (req.method == "GET") {
-            res.writeHead(201);
+            res.writeHead(200);
             return res.end(JSON.stringify(arrayOfPersons));
         }
     }
@@ -83,13 +83,13 @@ const persons = (req, res) => {
                 body = JSON.parse(body);
                 const person = new Dto(body, url);
                 if (arrayOfPersons === undefined || arrayOfPersons.length == 0) { throw new Error("The persons list is empty--create new persond thee you cat update it") }
-                arrayOfPersons.forEach((element, i) => { if (element.id === url) { arrayOfPersons[i] = person; } else { throw new Error("Cannot find person with such id for uodating") } })
+                arrayOfPersons.forEach((element, i) => { if (element.id === url) { arrayOfPersons[i] = person; } else { res.writeHead(404); throw new Error("Cannot find person with such id for uodating") } })
 
                 res.writeHead(200)
                 res.end( JSON.stringify(person));
             }
             catch (err) {
-                res.writeHead(400)
+                
                 res.end(JSON.stringify(err.message))
             }
         });
